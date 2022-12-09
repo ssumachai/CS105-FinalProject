@@ -54,6 +54,23 @@ Initial Bag-of-Words Model will look like this:
 
 ![Bag_Words](./report_images/initial_data.png)
 
+## Exploratory Data Analysis (EDA)
+
+```py
+review['overall'].value_counts().plot(kind='bar')       # Plot the distribution of ratings score
+```
+
+![bar_graph](./report_images/rating_plot.png)
+
+```py
+freq = bag.sum(axis=0)
+freq = freq.to_frame()
+freq.columns = ['freq']
+freq.sort_values(by='freq', ascending=False).groupby('freq').head()
+```
+
+![word_freq](./report_images/word_freq.png)
+
 ## Data Analysis and Manipulation (Jackson and Nathan)
 
 Now it's time to actually create our neural network.
