@@ -22,10 +22,10 @@ Amazon product data obtained from [here](jmcauley.ucsd.edu/data/amazon).  The da
 
 ## Tools Used
 
-* Ask
-* Nathan
-* and
-* Jackson 
+* Skikit Learn
+* Matplotlib
+* Pandas
+* Numpy 
 
 ## Pre-processing
 
@@ -54,9 +54,7 @@ Initial Bag-of-Words Model will look like this:
 
 ## Data Analysis and Manipulation (Jackson and Nathan)
 
-Now it's time to actually create our neural network.  For the sake of this assignment, the scope of the review will be defined as such:
-* Review of __**4 or higher**__ being a __positive__ review
-* Review of __**3 or lower**__ being a __negative__ review
+Now it's time to actually create our neural network.
 
 ```py
 x = bag.values                  # Our Bag-of-Words model
@@ -69,7 +67,7 @@ Use the given `test_train_splits()` function to create our the basis of our neur
 * `test_size=0.2`: 20% of the data will be testing
 * `random_state=42`: Seed value so that we can replicate our results in testing
 
-Now, we can actually create our neural network!  A common tactic is to utilize a **Multi-Layered Perceptron (MLP)** to make our classifications. 
+Now, we can actually create our neural network!  A common tactic is to utilize a **Multi-Layered Perceptron (MLP)** to find the weights for our regression. 
 
 ```py
 mlp = MLPRegressor(hidden_layer_sizes=(8,8,8), activation='relu', solver='adam', max_iter=500)
