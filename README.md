@@ -122,6 +122,14 @@ Our results yield as follows:
 
 ## Conclusion
 
+The goal of our project was to see if we could predict the rating of a movie by creating a neural network utilizing a Multi-Layered Perceptron algorithm for classification.  We initialized the data taken from a list of Amazon Instant Video reviews then proceeded to create a neural network so that we can create and fit our training data.  
+
+By processing our data to give us a Bag-of-Words Model, we identified the relationship between the frequency of some words in a review with the overall rating given to that movie.
+
+The MLP trains the model of the input data and the corresponding target values, which can then be used to make new predictions on new data by using the `predict` method. 
+
+Overall, this project relies on a mass collection of data and analyzes the relationship of certain words to predict the context of those ratings.  The words used are key!  In theory, it could read a review of a particular movie, and guage how the user writing that comment felt about the movie! 
+
 ## Questions
 
 1. How can neural networks be used to analyze and understand the sentiment expressed in Amazon Video reviews?
