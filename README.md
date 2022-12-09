@@ -7,6 +7,8 @@ Members:
 * Nathan Ng
 * Sumachai Suksanguan
 
+Project Repo: [GitHub](https://github.com/ssumachai/CS105-FinalProject)
+
 ## Introduction
 
 As we get busier and busier, we have less time to decide if things are good.  Movies in particular thrive from word-of-mouth from others and critic reviews.  Strongly worded reviews help distringuish a movie and give viewers something to look forward to.  We are building a simple neural network utilizing a bag-of-words model to create the necessary features from a collection of Amazon reviews.  The neural network will use each word in the review as features, while each row is a separate sentence to predict movie review star ratings.
@@ -138,12 +140,12 @@ predict_example = mlp.predict(exampleDF.values)
 
 Given that review:
 
-|             | Actual Rating | Predicted Rating | Difference |
-| :---------: | :-----------: | :--------------: | :--------: |
-| Mock Review | 5             | 4.4975           |    0.5125  |
+|                | Actual Rating | Predicted Rating | Difference |
+| :------------: | :-----------: | :--------------: | :--------: |
+| Mock Review #1 | 5             | 4.4975           |    0.5125  |
+| Mock Review #2 | 3             | 3.9252           |   -0.9252  |
 
-Not 
-
+Not bad for our model!  Considering that most reviews are integer values, it got really close to the actual value!
 
 ## Conclusion
 
