@@ -117,6 +117,33 @@ Our results yield as follows:
 | y_train | 0.2829  | 0.1688 |
 | y_test  | 0.2102  | 0.3754 |
 
+## Using our model to Test (and Verify) Amazon Reviews
+
+Given this Amazon review, let's push this through our model to see what it's predicted output would be!
+
+![amazon_review](./report_images/amazon.png)
+
+```py
+example = 'I have pain under my bridge and two broken teeth I can\'t afford to fix! This product helps me deal with it by getting rid of the trapped food several times a day! This deal made it easier to buy this year! Thank you'
+rating = 5
+analyze = vectorizer.build_analyzer()
+
+exampleDF - pd.DataFrame(index = range(1), columns=vectorizer.get_features_names_out()).fillna(0)
+for word in analyze(example):
+    if word in exampleDF.columns:
+        exampleDF[word]+=1
+
+predict_example = mlp.predict(exampleDF.values)
+```
+
+Given that review:
+
+|             | Actual Rating | Predicted Rating | Difference |
+| :---------: | :-----------: | :--------------: | :--------: |
+| Mock Review | 5             | 4.4975           |    0.5125  |
+
+Not 
+
 
 ## Conclusion
 
